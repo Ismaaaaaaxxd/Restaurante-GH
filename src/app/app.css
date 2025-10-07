@@ -1,0 +1,65 @@
+:host {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  background: linear-gradient(90deg, #ff4e50, #f9d423);
+  padding: 15px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active-link {
+  background-color: white;
+  color: #ff4e50;
+}
+
+main {
+    padding: 0;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  top: 6vh;
+  width: 100%;
+}

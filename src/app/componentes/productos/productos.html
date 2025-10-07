@@ -1,0 +1,13 @@
+<div class="menu-container">
+  <h2>Nuestro Menú</h2>
+  <div class="productos-grid">
+    <div *ngFor="let producto of productos" class="producto-card">
+      <img [src]="producto.imagen" [alt]="producto.nombre">
+      <div class="producto-info">
+        <h3>{{ producto.nombre }}</h3>
+        <p>{{ producto.descripcion }}</p>
+        <p class="precio">${{ producto.precio.toFixed(2) }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+/* 1. Elimina los márgenes por defecto del navegador */
+body {
+  background-color: #333; /* Mismo color que el footer */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* 2. Convierte tu app en un contenedor flexible para distribuir el espacio */
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa como mínimo el 100% de la altura de la vista */
+}
+
+/* 3. Haz que el contenido principal crezca para empujar el footer hacia abajo */
+main {
+  flex-grow: 1;
+}
