@@ -6,10 +6,10 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl: './app.html',
+  styleUrl: './app.css'
 })
-export class AppComponent { // O 'export class App'
+export class App { // O 'export class App'
   title = 'restaurante-app';
   isMenuOpen = false; // Estado para controlar el menú
 
