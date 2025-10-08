@@ -51,3 +51,17 @@
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(255, 78, 80, 0.4);
 }
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5em; /* Reducimos el tamaño del título principal */
+  }
+
+  .hero-content p {
+    font-size: 1.1em; /* Reducimos el tamaño del párrafo */
+  }
+
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+}

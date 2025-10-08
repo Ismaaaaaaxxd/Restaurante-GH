@@ -1,17 +1,23 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// 1. Agrega estas importaciones del router
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'app-root', // O el selector que estés usando
+  selector: 'app-root',
   standalone: true,
-  // 2. Añade las directivas al array de 'imports'
   imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
-  templateUrl: './app.html', // O como se llame tu archivo de plantilla
-  styleUrl: './app.css'     // O como se llame tu archivo de estilos
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
-// 3. Asegúrate de que el nombre de la clase sea 'App'
-export class App {
+export class AppComponent { // O 'export class App'
   title = 'restaurante-app';
+  isMenuOpen = false; // Estado para controlar el menú
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
 }

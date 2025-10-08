@@ -63,3 +63,68 @@ main {
   top: 6vh;
   width: 100%;
 }
+/* --- ESTILOS PARA EL BOTÓN HAMBURGUESA --- */
+.hamburger {
+  display: none; /* Oculto por defecto en pantallas grandes */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001; /* Asegura que esté por encima de otros elementos */
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.is-active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* --- MEDIA QUERY PARA RESPONSIVE --- */
+/* Estilos que se aplican solo en pantallas de 768px o menos */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Mostramos el botón */
+  }
+
+  .nav-links {
+    display: none; /* Ocultamos la lista de links horizontal */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Ajusta según la altura de tu header */
+    left: 0;
+    background: linear-gradient(180deg, #ff4e50, #f99f23);
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.nav-open {
+    display: flex; /* Mostramos la lista cuando el menú está abierto */
+    text-align: center;
+  }
+
+  .nav-links li {
+    padding: 15px 0;
+  }
+
+  .nav-links a {
+    font-size: 1.5em;
+  }
+}
